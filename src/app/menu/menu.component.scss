@@ -1,0 +1,137 @@
+:root {
+    --clr: #0c1018;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #1c2e4d;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 70%;
+    position: relative;
+    height: 70px;
+    border-radius: 10px;
+
+    a {
+        margin-left: 50px;
+        text-decoration: none;
+        color: #CCD6F6;
+        font-size: 20px;
+
+        &:hover {
+            color: #8892b0;
+        }
+    }
+
+    img {
+        height: 50px;
+        width: 50px;
+        object-fit: contain;
+        padding: 10px;
+    }
+
+    .show-mobile {
+        display: none;
+
+    }
+    @media(max-width: 680px) {
+    
+        .show-mobile {
+            display: flex;
+        }
+    }
+}
+
+
+@media(max-width: 900px) {
+.menu {
+
+    a {
+        font-size: 16px;
+    }
+}
+}
+
+.desktop-menu {
+    @media(max-width: 680px) {
+        display: none;
+    }
+}
+
+.material-icons {
+    display: none;
+    color: #CCD6F6;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+
+    @media(max-width: 680px) {
+        display: flex;
+    }
+}
+
+
+@keyframes showNav {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.mobile-btn {
+    img {
+        width: 30px;
+        height: 30px;
+        z-index: 99999;
+    }
+}
+
+.mobile-menu {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    z-index: 99;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: #CCD6F6;
+    width: 25%;
+    cursor: pointer;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    a{
+        text-decoration: none;
+        color: #2a3c5a;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+    
+        &:hover {
+            color: #021b49;
+            font-size: 18px;
+        }
+
+    
+}
+
+
+}
+

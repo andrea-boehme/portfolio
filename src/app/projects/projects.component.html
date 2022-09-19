@@ -1,0 +1,29 @@
+<div id="projects" class="bg1">
+    <div class="bg-container">
+        <h2 >My Projects</h2>
+        <div class="projects-container">
+            <div *ngFor="let project of projects; let i = index;" class="project">
+               <div>
+                        <img class="project-img" src="assets/img/{{ projects[i].img }}">
+                        <div class="text">
+                            <span class="title">{{ projects[i].title }}</span>
+                            <span class="description">{{ projects[i].description }}</span>
+                            <span class="tool">Tools: {{ projects[i].tool }}</span>
+                            <div class="links">
+                                <a href="{{ projects[i].url }}" target="_blank" class="link-background">
+                                    <img class="link-img" src="assets/icon/browser.png">
+                                </a>
+                                <a href="{{ projects[i].git }}" target="_blank" class="link-background">
+                                    <img class="link-img" src="assets/icon/github.png">
+                                </a>
+                            </div>
+                        </div> 
+                </div>
+           
+        
+            </div>
+        </div>
+    </div>
+</div>
+
+            

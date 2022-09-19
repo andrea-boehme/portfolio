@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<div id="skills" class="bg2">
+    <div class="bg-container">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div *ngFor="let skill of skills; let i = index;" class="skill">
+                <div class="skill-icon">
+                    <img src="assets/icon/{{ img[i] }}">
+                </div>
+                <span>{{ skill }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+

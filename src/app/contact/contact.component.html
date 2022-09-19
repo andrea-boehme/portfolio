@@ -1,0 +1,22 @@
+<div id="contact" class="bg1">
+    <div class="bg-container">
+        <div class="contact">
+            <div class="contact-text">
+                <h2 >Contact me</h2>
+                <span>Get in touch via the form below, or by emailing: </span><br>
+                <span class="my-email">andrea.bohme@gmail.com</span>
+            </div>
+            <form #form action="https://andrea-boehme.developerakademie.net/portfolio-ab/send_mail.php" method="POST" [formGroup]="contact">
+                <span>Name:</span>
+                <input type="text" name="name" formControlName="name" placeholder="Please enter your name" required [(ngModel)]="name">
+                <span>Email adress:</span>
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" placeholder="Please enter your email address" required [(ngModel)]="email">
+                <span>Message:</span>
+                <textarea name="message" formControlName="message" placeholder="Please enter your message" required [(ngModel)]="message"></textarea>
+                <div class="btn">
+                    <button [disabled]="!contact.valid" type="submit" value="Submit" (click)="form.submit(); onSubmit()">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

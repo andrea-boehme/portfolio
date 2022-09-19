@@ -1,0 +1,169 @@
+.bg-container {
+  min-height: 83vh;
+    span {
+      color: #acb9df;
+    }
+  
+    form {
+      min-width: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      color: #acb9df;
+      margin-top: 30px;
+      margin-bottom: 50px;
+  
+      span {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+  
+      input {
+        height: 32px;
+        background-color: #1e3563;
+        color: #acb9df;
+        border: none;
+        padding: 5px;
+  
+        &.ng-touched,
+        &.ng-dirty &.ng-invalid {
+          border: red 1px solid;
+        }
+  
+        &.ng-valid {
+          border: unset;
+        }
+      }
+  
+      input:focus {
+        outline: none;
+      }
+  
+      input::placeholder {
+        color: #c5c6c7;
+        padding: 8px;
+        font-size: 12px;
+        opacity: 0.3;
+        font-style: italic;
+      }
+  
+      input[type="name"] {
+        font-size: 15px;
+      }
+  
+      input[type="name"] {
+        font-size: 15px;
+      }
+  
+      input:focus::placeholder {
+        color: transparent;
+      }
+  
+      textarea:focus::placeholder {
+        color: transparent;
+      }
+  
+      textarea {
+        font-family: inherit;
+        max-width: 100%;
+        color: #acb9df;
+        font-size: 15px;
+        height: 150px;
+        box-sizing: border-box;
+        background-color: #1e3563;
+        border: none;
+        resize: none;
+        padding: 5px;
+  
+        &.ng-touched,
+      &.ng-dirty &.ng-invalid {
+          border: red 1px solid;
+        }
+  
+        &.ng-valid {
+          border: unset;
+        }
+      }
+  
+      textarea:focus {
+        outline: none;
+      }
+  
+      textarea[type="text"] {
+        font-size: 15px;
+      }
+  
+      textarea::placeholder {
+        color: #c5c6c7;
+        padding: 8px;
+        font-size: 12px;
+        opacity: 0.3;
+        font-style: italic;
+      }
+  
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        width: 90px;
+        height: 50px;
+        background-color: #1e3563;
+        color: #8892b0;
+        border: 1px solid #CCD6F6;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #8892b0;
+            color: #2a3c5a;
+        }
+      }
+    }
+  }
+  
+  .my-email {
+    color: #8892b0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contact-text {
+    width: 50%;
+    padding-right: 100px;
+  }
+  
+  .email-sent {
+    text-align: center;
+    color: white;
+    z-index: 99999;
+  }
+  
+  @media (max-width: 750px) {
+    .contact {
+      flex-direction: column;
+    }
+  
+    .contact-text {
+      padding-right: 0px;
+      width: 100%;
+  
+      span {
+        width: 100%;
+      }
+    }
+  }
