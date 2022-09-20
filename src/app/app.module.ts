@@ -25,6 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { SuccessComponent } from './success/success.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -55,7 +56,9 @@ import { HotToastModule } from '@ngneat/hot-toast';
     MatToolbarModule,
     MatExpansionModule,
     MatMenuModule,
-    HotToastModule
+    HotToastModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
