@@ -21,10 +21,7 @@
                     <button [disabled]="!myForm.valid" type="submit" value="Submit"
                         (click)="form.submit()">Send</button>
                 </div>
-                <div *ngIf="submitComplete" class="confirmation">
-                    <p>{{ submitReport }}</p>
-                    <button (click)="closeConfirmation()">OK</button>
-                </div>
+                
             </form>
         </div>
     </div>
