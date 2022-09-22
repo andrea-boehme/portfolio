@@ -3,8 +3,8 @@
         <div class="contact">
             <div class="contact-text">
                 <h2>Contact me</h2>
-                <span>Get in touch via the form below, or by emailing: </span><br>
-                <span class="my-email">andrea.bohme@gmail.com</span>
+                <span>Send me a message via form or via email: </span><br>
+                <span class="my-email">andrea.bohme24@gmail.com</span>
             </div>
             <form #form action="https://andrea-boehme.developerakademie.net/portfolio/send_mail.php" method="POST"
                 #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate novalidate>
@@ -21,7 +21,6 @@
                     <button [disabled]="!myForm.valid" type="submit" value="Submit"
                         (click)="form.submit()">Send</button>
                 </div>
-                
             </form>
         </div>
     </div>

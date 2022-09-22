@@ -1,8 +1,13 @@
-.bg1 {
+.bg-container {
     min-height: 88vh;
-}
-
-.imprint-container {
+    align-items: unset;
+    color: #ccd6f6;
     margin-top: 100px;
-    color: #CCD6F6;
+    margin-bottom: 50px;
+
+    a {
+        text-decoration: none;
+        color: #ccd6f6;
+        font-style: italic;
+    }
 }

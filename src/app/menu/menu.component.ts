@@ -1,5 +1,4 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { MatMenu } from '@angular/material/menu';
 
 @Component({
   selector: 'app-menu',
@@ -9,28 +8,25 @@ import { MatMenu } from '@angular/material/menu';
 export class MenuComponent implements OnInit {
 
   constructor() { }
-  
-  lastY = 0;
+
+  y = 0;
   scrollDown = false;
   menuOpen = false;
   menuBtn = false;
 
-  @HostListener('window:scroll', ['$event'], )
-  onScroll(){
-    if(window.pageYOffset > this.lastY){
+  @HostListener('window:scroll', ['$event'],)
+  onScroll() {
+    if (window.pageYOffset > this.y) {
       this.scrollDown = true;
     }
-    else if(window.pageYOffset < this.lastY){
+    else if (window.pageYOffset < this.y) {
       this.scrollDown = false;
     }
-    this.lastY = window.pageYOffset;
+    this.y = window.pageYOffset;
   }
 
-  
-
   ngOnInit(): void {
-    this.lastY = window.pageYOffset;
-    console.log(window.pageYOffset)
+    this.y = window.pageYOffset;
   }
 
   openMenu() {
@@ -38,11 +34,10 @@ export class MenuComponent implements OnInit {
     if (this.menuOpen) {
       this.menuBtn = true;
     }
-      else {
-        this.menuBtn = false;
-      }
-}
-
+    else {
+      this.menuBtn = false;
+    }
+  }
 
 }
 

@@ -10,7 +10,7 @@ export class SuccessComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.setTimeout("location.href='';", 8000);
+    
   }
 
 

@@ -1,7 +1,3 @@
-:root {
-    --clr: #0c1018;
-}
-
 header {
     position: fixed;
     z-index: 10;
@@ -14,7 +10,7 @@ header {
 
 .menu {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     width: 70%;
     position: relative;
@@ -24,7 +20,7 @@ header {
     a {
         margin-left: 50px;
         text-decoration: none;
-        color: #CCD6F6;
+        color: #ccd6f6;
         font-size: 20px;
 
         &:hover {
@@ -41,44 +37,27 @@ header {
 
     .show-mobile {
         display: none;
-
     }
-    @media(max-width: 680px) {
-    
+    @media (max-width: 680px) {
         .show-mobile {
             display: flex;
         }
     }
 }
 
-
-@media(max-width: 900px) {
-.menu {
-
-    a {
-        font-size: 16px;
+@media (max-width: 900px) {
+    .menu {
+        a {
+            font-size: 16px;
+        }
     }
-}
 }
 
 .desktop-menu {
-    @media(max-width: 680px) {
+    @media (max-width: 680px) {
         display: none;
     }
 }
-
-.material-icons {
-    display: none;
-    color: #CCD6F6;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 9999;
-
-    @media(max-width: 680px) {
-        display: flex;
-    }
-}
-
 
 @keyframes showNav {
     from {
@@ -109,13 +88,13 @@ header {
     position: absolute;
     top: 70px;
     right: 10px;
-    background: #CCD6F6;
+    background: #ccd6f6;
     width: 25%;
     cursor: pointer;
     padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    a{
+    a {
         text-decoration: none;
         color: #2a3c5a;
         margin-top: 30px;
@@ -123,15 +102,10 @@ header {
         font-size: 16px;
         text-transform: uppercase;
         font-weight: bold;
-    
+
         &:hover {
             color: #021b49;
             font-size: 18px;
         }
-
-    
+    }
 }
-
-
-}
-

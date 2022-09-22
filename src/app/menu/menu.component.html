@@ -1,25 +1,23 @@
 <header *ngIf="!scrollDown">
-    <div class="menu">
-        <img src="assets/img/logo-dark.png">
-        <div class="desktop-menu">
-            <a href="#home">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="mobile-btn show-mobile" (click)="openMenu()">
-          <img src="../assets/img/menu-w.png" *ngIf="!menuBtn">
-          <img src="../assets/img/close-w.png" *ngIf="menuBtn">
-        </div>
-    </div>
-    
-    <div class="mobile-menu show-mobile" *ngIf="menuOpen">
+  <div class="menu">
+    <img src="assets/img/logo-dark.png">
+    <div class="desktop-menu">
       <a href="#home">Home</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
+    <div class="mobile-btn show-mobile" (click)="openMenu()">
+      <img src="assets/img/menu-w.png" *ngIf="!menuBtn">
+      <img src="assets/img/close-w.png" *ngIf="menuBtn">
+    </div>
+  </div>
+  <div class="mobile-menu show-mobile" *ngIf="menuOpen">
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </header>
-

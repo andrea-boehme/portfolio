@@ -9,6 +9,16 @@
     width: 80%;
 }
 
+@media (max-width: 730px) {
+    .skills-container {
+        width: 100%;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
 .skill {
     position: relative;
     display: flex;
@@ -23,7 +33,7 @@
     box-shadow: 10px 20px 15px rgba(180, 169, 169, 0.5);
 
     span {
-        color: #CCD6F6;
+        color: #ccd6f6;
         font-size: 20px;
     }
 
@@ -40,7 +50,7 @@
     align-items: center;
     height: 50px;
     width: 50px;
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
     border-radius: 10px;
     box-shadow: 10px 15px 10px rgba(180, 169, 169, 0.5);
 
@@ -48,16 +58,3 @@
         height: 40px;
     }
 }
-
-@media(max-width: 730px) {
-
-    .skills-container {
-        width: 100%;
-        margin-bottom: 60px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    
-  }

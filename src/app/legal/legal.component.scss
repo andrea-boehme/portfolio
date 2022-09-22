@@ -1,16 +1,24 @@
-.bg1 {
-    min-height: 88vh;
-}
-
 .legal-container {
-    color: #CCD6F6;
+    color: #ccd6f6;
     margin-top: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 
     a {
         text-decoration: none;
-        color: #CCD6F6;
+        color: #ccd6f6;
         text-decoration-line: underline;
         font-style: italic;
+    }
+}
+
+@media (max-width: 450px) {
+    .legal-container {
+        font-size: 9px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 14px;
     }
 }
