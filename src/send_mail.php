@@ -2,14 +2,15 @@
 
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: POST");
+        //header("Access-Control-Allow-Origin: *");
+       // header("Access-Control-Allow-Methods: POST");
         header("Access-Control-Allow-Headers: content-type");
         exit;
     case ("POST"): //Send the email;
-        header("Access-Control-Allow-Origin: *");
+        //header("Access-Control-Allow-Origin: *");
 
-        $recipient = 'andrea.bohme@gmail.com';
+        $recipient = 'andrea.bohme24@gmail.com';
+        $redirect = 'confirmation.html';
         $subject = "Contact From " . $_POST['email'];
         $headers = "From:  noreply@developerakademie.com";
         $message = "Received an e-mail through your contact form: \n";
@@ -18,7 +19,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $message .= "Message: {$_POST['message']} \n";
 
         mail($recipient, $subject, $message, $headers);
-        echo $subject;
+        header("Location: " . $redirect);
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);

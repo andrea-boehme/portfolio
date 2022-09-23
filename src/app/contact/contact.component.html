@@ -6,22 +6,23 @@
                 <span>Send me a message via form or via email: </span><br>
                 <span class="my-email">andrea.bohme24@gmail.com</span>
             </div>
-            <form #form action="https://andrea-boehme.developerakademie.net/portfolio/send_mail.php" method="POST"
-                #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate novalidate>
+            <form (submit)="sendContact()" ngNativeValidate #myForm>
                 <span>Name:</span>
-                <input type="text" id="name" name="name" [(ngModel)]="name" placeholder="Please enter your name"
-                    required>
+                <input type="text" name="name" #nameField placeholder="Please enter your name" required>
                 <span>Email adress:</span>
-                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email"
-                    name="email" [(ngModel)]="email" required placeholder="Please enter your email address">
+                <input type="email" name="email" #emailField pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Please enter your email address" required>
                 <span>Message:</span>
-                <textarea id="message" name="message" [(ngModel)]="message" rows="3" required
-                    placeholder="Please enter your message"></textarea>
+                <textarea id="message" name="message" #messageField rows="3"
+                    placeholder="Please enter your message" required></textarea>
                 <div class="btn">
-                    <button [disabled]="!myForm.valid" type="submit" value="Submit"
-                        (click)="form.submit()">Send</button>
+                    <button type="submit" #sendButton>Send</button>
                 </div>
+                <div *ngIf="submitStatus" class="confirmation">
+                    <p>{{ submitMessage }}</p>
+                    <button (click)="closeConfirmation()">OK</button>
+                  </div>
             </form>
         </div>
     </div>
-</div>
+
+    
