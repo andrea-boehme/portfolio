@@ -102,3 +102,42 @@
     width: 20px;
     padding: 5px;
 }
+
+.active {
+    background-color: #1e3563 !important;
+    font-weight: bold !important;
+}
+
+.filter-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+    .filter-row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.filter {
+    background-color: #2a3c5a;
+    color:  #CCD6F6;
+    margin: 0 10px 5px 10px;
+    border-radius: 10px;
+    border: 2px solid #CCD6F6;
+    font-size: 1.5rem;
+    padding: 10px;
+    width: calc(100%/3);
+    min-width: 120px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #1e3563;
+        font-weight: bold;
+    }
+}
