@@ -1,5 +1,5 @@
 <div id="contact" class="bg1">
-    <div class="bg-container">
+    <div class="bg-container" [class.transparent]="submitStatus">
         <div class="contact">
             <div class="contact-text">
                 <h2>Contact me</h2>
@@ -16,13 +16,15 @@
                     placeholder="Please enter your message" required></textarea>
                 <div class="btn">
                     <button type="submit" #sendButton>Send</button>
+                    <div *ngIf="loading"><div class="loading"></div></div>
                 </div>
-                <div *ngIf="submitStatus" class="confirmation">
-                    <p>{{ submitMessage }}</p>
-                    <button (click)="closeConfirmation()">OK</button>
-                  </div>
             </form>
         </div>
-    </div>
+    </div>    
+        <div *ngIf="submitStatus" class="confirmation">
+            <p>{{ submitMessage }}</p>
+            <button (click)="closeConfirmation()">OK</button>
+          </div>
+</div>
 
     

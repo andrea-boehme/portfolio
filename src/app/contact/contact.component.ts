@@ -15,6 +15,7 @@ export class ContactComponent implements OnInit {
   
   submitMessage = '';
   submitStatus = false;
+  loading = false;
 
   constructor() { }
 
@@ -23,6 +24,7 @@ export class ContactComponent implements OnInit {
   }
 
   async sendContact() {
+    this.loading = true;
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
@@ -44,6 +46,7 @@ export class ContactComponent implements OnInit {
     }
     );
     
+    this.loading = false;
     this.submitMessage = "Your message has been successfully sent. I will contact you very soon!";
     this.submitStatus = true;
 
