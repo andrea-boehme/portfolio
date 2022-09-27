@@ -108,8 +108,8 @@
 }
 
 .active {
-    background-color: #1e3563 !important;
-    font-weight: bold !important;
+    background-color:  #CCD6F6 !important;
+    color:  #1e3563 !important;
 }
 
 .filter-row {
@@ -128,11 +128,11 @@
 }
 
 .filter {
-    background-color: #2a3c5a;
+    background-color: #1e3563;
     color:  #CCD6F6;
     margin: 0 10px 5px 10px;
     border-radius: 10px;
-    border: 2px solid #CCD6F6;
+    border: none;
     font-size: 1.5rem;
     padding: 10px;
     width: calc(100%/3);
@@ -141,7 +141,6 @@
     cursor: pointer;
 
     &:hover {
-        background-color: #1e3563;
-        font-weight: bold;
+        cursor: pointer;
     }
 }
